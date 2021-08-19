@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+// @ts-ignore
 import sqlite3 from "sqlite3";
 import { open as openDatabase, Database } from "sqlite";
 
