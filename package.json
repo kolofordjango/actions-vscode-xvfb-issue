@@ -48,5 +48,9 @@
 		"ts-loader": "^8.0.14",
 		"webpack": "^5.19.0",
 		"webpack-cli": "^4.4.0"
+	},
+	"dependencies": {
+		"sqlite": "^4.0.22",
+		"sqlite3": "^5.0.2"
 	}
 }
