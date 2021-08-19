@@ -8,8 +8,18 @@ import * as vscode from 'vscode';
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
 
-	test('Sample test', () => {
-		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
-		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
+	test('Activate extension', async () => {
+		const extension = getExtension();
+
+		await extension.activate();
+
+		assert.ok(extension.isActive);
+    	assert.strictEqual(extension.id, "test.actions-vscode-xvfb-issue");
 	});
 });
+
+function getExtension(): vscode.Extension<any> {
+	const ext = vscode.extensions.getExtension("test.actions-vscode-xvfb-issue");
+	assert.notStrictEqual(undefined, ext);
+	return ext as vscode.Extension<any>;
+  }

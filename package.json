@@ -1,5 +1,6 @@
 {
 	"name": "actions-vscode-xvfb-issue",
+	"publisher": "test",
 	"displayName": "actions-vscode-xvfb-issue",
 	"description": "",
 	"version": "0.0.1",
